@@ -18,10 +18,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies and build
+       - name: Install dependencies and build
         run: |
           npm install --legacy-peer-deps
-          npx @tanstack/router-generator generate || npx tsr generate || true
+          npx @tanstack/router-generator || true
           npm run build
           
       - name: Deploy to GitHub Pages
