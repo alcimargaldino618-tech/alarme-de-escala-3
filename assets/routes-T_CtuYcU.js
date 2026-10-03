@@ -1,0 +1,1 @@
+import{t as e}from"./index-BgMgq2BB.js";var t=e();function n(){return(0,t.jsx)(`div`,{children:`Alarme de Escala`})}export{n as component};
