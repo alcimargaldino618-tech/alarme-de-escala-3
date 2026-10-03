@@ -24,6 +24,10 @@ jobs:
           npx @tanstack/router-cli generate
           npm run build
           
+      - name: Create index.html
+        run: |
+          cp .output/public/_shell.html .output/public/index.html
+
       - name: Verify build output
         run: |
           echo "=== .output/public ==="
