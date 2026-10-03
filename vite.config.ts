@@ -11,10 +11,14 @@ export default defineConfig({
   base: '/alarme-de-escala-3/',
   
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+  server: { entry: "server" },
+  spa: {
+    enabled: true,
+    prerender: {
+      crawlLinks: true,
+    },
   },
+},
   vite: {
     plugins: [
       VitePWA({
