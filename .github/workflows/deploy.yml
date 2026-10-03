@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           npm install --legacy-peer-deps
-          npx @tanstack/router-generator generate || true
+          npx tsr generate || npx @tanstack/router-cli generate || npx @tanstack/router-generator generate || true
           npm run build
 
       - name: Deploy to GitHub Pages
@@ -29,4 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          
