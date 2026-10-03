@@ -23,7 +23,12 @@ jobs:
           npm install --legacy-peer-deps
           npx @tanstack/router-cli generate
           npm run build
-        
+          
+      - name: Verify build output
+        run: |
+          echo "=== .output/public ==="
+          find .output/public -maxdepth 2 -type f | sort
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
