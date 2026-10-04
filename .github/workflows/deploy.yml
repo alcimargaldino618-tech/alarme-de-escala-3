@@ -27,6 +27,7 @@ jobs:
       - name: Create index.html
         run: |
           cp .output/public/_shell.html .output/public/index.html
+          sed -i 's|"/assets/|"/alarme-de-escala-3/assets/|g' .output/public/index.html
 
       - name: Verify build output
         run: |
