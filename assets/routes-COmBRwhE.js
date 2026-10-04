@@ -1,0 +1,1 @@
+import{t as e}from"./index-DTLT1N57.js";var t=e();function n(){return(0,t.jsxs)(`div`,{children:[(0,t.jsx)(`h1`,{children:`ALARME DE ESCALA`}),(0,t.jsx)(`p`,{children:`Aplicativo carregado corretamente.`})]})}export{n as component};
